@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class MediaAlunos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		double n1, n2, n3, n4, nn1, nn2, nn3, nn4, nnn1, nnn2, nnn3, nnn4, MediaB1, MediaB2, MediaB3, MediaSemestre, ProvaFinal;
+		
+		System.out.println("Digite as Notas para o primeiro Bimestre");
+		n1 = teclado.nextDouble();
+		n2 = teclado.nextDouble();
+		n3 = teclado.nextDouble();
+		n4 = teclado.nextDouble();
+		
+		MediaB1 = ((n1*3) + (n2*3) + (n3*2) + (n4*3) )/4;
+		System.out.println("Sua Media do Primeiro Bimestre foi=  " + MediaB1);
+		
+		System.out.println("Digite as Notas para o segundo Bimestre");
+		nn1 = teclado.nextDouble();
+		nn2 = teclado.nextDouble();
+		nn3 = teclado.nextDouble();
+		nn4 = teclado.nextDouble();
+		
+		MediaB2 = ((nn1*3) + (nn2*3) + (nn3*2) + (nn4*3) )/4;
+		System.out.println("Sua Media do Segundo Bimestre foi=  " + MediaB2);
+		
+		System.out.println("Digite as Notas para o terceiro Bimestre");
+		nnn1 = teclado.nextDouble();
+		nnn2 = teclado.nextDouble();
+		nnn3 = teclado.nextDouble();
+		nnn4 = teclado.nextDouble();
+		
+		MediaB3 = ((nnn1*3) + (nnn2*3) + (nnn3*2) + (nnn4*3) )/4;
+		System.out.println("Sua Media do Segundo Bimestre foi=  " + MediaB3);
+		
+		MediaSemestre = (MediaB1+MediaB2+MediaB3)/4;
+		ProvaFinal = MediaSemestre - 10.00 ;
+		if (MediaSemestre >= 8) {
+			
+			System.out.println("Sua Nota no semestre foi " +MediaSemestre+ " Você Foi Aprovado" );
+				
+			}else {
+				System.out.println("Você Foi Reprovado");
+				System.out.println("Tera de tirar pelo menos  " + ProvaFinal+ " Na Prova final para ser aprovado" );
+				
+			}
+			
+		
+		
+	}
+}
