@@ -1,0 +1,64 @@
+import java.util.Scanner;
+public class MediaGeral {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int avaliacao=0, aprovados=0, reprovados=0, guardarnota, contaaluno=0 ;
+		double prova, projeto, lexe, resultado ;
+			
+		
+		contaaluno = contaaluno + 1;
+		
+					for (int i =0; i < 3 ;i++) {
+					System.out.println("--------------------");	
+					System.out.println("Aluno "+i+contaaluno);
+					System.out.println("Digite a nota da prova");
+					prova=sc.nextDouble()*5;
+					System.out.println("Digite a nota do projeto");
+					projeto=sc.nextDouble()*3;
+					System.out.println("Digite a nota da lista de exercicios ");
+					lexe=sc.nextDouble()*2;
+					System.out.println("--------------------");	
+					
+					resultado = (prova + projeto + lexe)/3;
+					System.out.println(" Media do aluno " +resultado);
+					
+					
+					
+					
+					if (resultado > 8) {
+						
+						System.out.println("\"Aluno foi aprovado, sua média foi " +resultado);
+						aprovados++;
+							
+						}if(resultado > 5 && resultado < 8) {
+							System.out.println("O aluno terá de fazer avaliação final, sua média foi "+resultado);
+							avaliacao++;
+						}else {
+							System.out.println("O Aluno foi reprovado , sua média foi "+resultado);
+							reprovados++;
+						}
+						
+						
+					}
+					System.out.println("*******************************************");
+					System.out.println("O Total de alunos aprovados foi "+aprovados);
+					System.out.println("O Total de alunos que teram de fazer avaliação final foi " +avaliacao);
+					System.out.println("O Total de alunos reprovados foi "+reprovados);
+					
+	}
+					
+					
+	}
+	
+			
+				
+			
+	
+
+
+
+
+
