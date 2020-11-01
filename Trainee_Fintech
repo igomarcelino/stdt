@@ -1,0 +1,67 @@
+
+import java.util.Scanner;
+
+public class Trainee_Fintech {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		
+		double [][] valorDia = new double [7][4];
+		double []semana = new double [4];
+		double mMensal,mMaior,mMenor,mSemanal,total=0;
+		
+		for ( int s = 0 ; s <= valorDia[0].length-1;s++) {
+			System.out.print("");
+			System.out.println("Digite os valores para a "+(s+1)+"° semana");
+			for (int d = 0; d <=valorDia.length -1;d++) {
+				System.out.println("Digite o valor para o "+(d+1)+"° dia");
+				valorDia[d][s]=sc.nextDouble(); 
+				
+			}
+			
+			
+		}
+		sc.close();// fim da entrada de dados
+		
+		System.out.println("");
+		
+		for (int vd = 0 ; vd < valorDia[0].length;vd++) {
+			double soma = 0;
+			for (int vs = 0 ; vs < valorDia.length;vs++) {
+				soma += valorDia[vs][vd];
+				semana[vd] = soma / 7 ;
+			}
+		total += semana[vd];		
+		}
+		mMensal = total / 4;  //media semanal ( maior e menor
+		
+		mMaior = semana[0];
+		mMenor = semana[0];
+		
+		for (int i = 0 ; i < semana.length;i++ ) {
+			if(semana[i] > mMaior) {
+				mMaior = semana[i];
+			}if(semana[i] > mMenor) {
+				mMenor = semana[i] ;
+			}
+		}
+		
+		for (int i = 0 ; i < semana.length ; i++) {
+			System.out.println("A media da "+(i+1)+"° semana foi de "+semana[i]); //media semana
+		}
+				
+		for (int i = 0 ; i < semana.length; i++) {
+			if(semana[i]==mMaior ) {
+				System.out.println("A Maior Média foi da "+(i+1)+"° semana = "+mMaior);
+				}else if ( semana[i]==mMenor) {
+					System.out.println("A menor média foi da "+(i+1)+mMenor);
+					
+				}
+		}
+		
+	System.out.print("A media do mes foi "+total);
+		
+	}
+	}
